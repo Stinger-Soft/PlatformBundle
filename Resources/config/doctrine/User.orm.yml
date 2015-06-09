@@ -1,0 +1,34 @@
+StingerSoft\PlatformBundle\Entity\User:
+  type:  entity
+  repositoryClass: StingerSoft\PlatformBundle\Repository\UserRepository
+  inheritanceType: JOINED
+  discriminatorColumn:
+    name: discr
+    type: string
+  table: fos_user
+  id:
+    id:
+      type: integer
+      generator: { strategy: AUTO }
+  fields:
+    firstname:
+      type: string
+      length: 255
+      nullable: true
+    surname:
+      type: string
+      length: 255
+      nullable: true
+
+  manyToMany:
+    groups:
+        targetEntity: Group
+        inversedBy: users
+        joinTable:
+            name: fos_user_group
+            joinColumns:
+                user_id:
+                    referencedColumnName: id
+            inverseJoinColumns:
+                group_id:
+                    referencedColumnName: id

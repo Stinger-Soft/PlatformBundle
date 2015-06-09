@@ -1,0 +1,12 @@
+StingerSoft\PlatformBundle\Entity\Group:
+  type:  entity
+  table: fos_group
+  id:
+    id:
+      type: integer
+      generator:
+        strategy: AUTO
+  manyToMany:
+    users:
+        targetEntity: User
+        mappedBy: groups
