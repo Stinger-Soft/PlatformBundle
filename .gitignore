@@ -35,3 +35,7 @@
 
 # Composer PHAR
 /composer.phar
+/composer.lock
+
+# IDE specific stuff
+/.idea/*
