@@ -1,10 +1,8 @@
 language: php
 
-before_install:
-  - composer self-update
-
-install:
-  - composer install --prefer-source
+cache:
+    directories:
+        - $HOME/.composer/cache
 
 matrix:
   include:
@@ -16,6 +14,12 @@ matrix:
 
     - php: hhvm
       env: COVERALLS=0
+
+before_install:
+  - composer self-update
+
+install:
+  - composer install --prefer-source
 
 script:
   - mkdir -p ./build/logs
