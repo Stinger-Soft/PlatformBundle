@@ -25,11 +25,12 @@ class UserTest extends TestCase {
 		$this->assertEquals('pmobb', $user->getUsername());
 		$this->assertEquals('pmobb', strval($user));
 
-		$user->setFirstname('Peter');
-		$this->assertEquals('Peter', $user->getFirstname());
-
 		$user->setSurname('Mobb');
 		$this->assertEquals('Mobb', $user->getSurname());
+		$this->assertEquals('Mobb', $user->getReversedRealName());
+
+		$user->setFirstname('Peter');
+		$this->assertEquals('Peter', $user->getFirstname());
 
 		$this->assertEquals('Peter Mobb', $user->__toString());
 		$this->assertEquals('Peter Mobb', $user->getRealName());

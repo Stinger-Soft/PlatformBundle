@@ -55,15 +55,18 @@ class GroupTest extends TestCase {
 		$group = new Group('mygroup');
 
 		$this->assertEmpty($group->getUsers());
+		$this->assertEquals(0, $group->getUsersCount());
 		$user = new User();
 		$user->setFirstname('Peter')->setSurname('Mobb');
 
 		$group->addUser($user);
 		$this->assertNotEmpty($group->getUsers());
 		$this->assertContains($user, $group->getUsers());
+		$this->assertEquals(1, $group->getUsersCount());
 
 		$group->removeUser($user);
 		$this->assertNotContains($user, $group->getUsers());
 		$this->assertEmpty($group->getUsers());
+		$this->assertEquals(0, $group->getUsersCount());
 	}
 }
