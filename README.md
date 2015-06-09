@@ -1,2 +1,2 @@
-# PlatformBundle [![Build Status](https://travis-ci.org/Stinger-Soft/PlatformBundle.svg?branch=master)](https://travis-ci.org/Stinger-Soft/PlatformBundle)
+# PlatformBundle [![Build Status](https://travis-ci.org/Stinger-Soft/PlatformBundle.svg?branch=master)](https://travis-ci.org/Stinger-Soft/PlatformBundle) [![Coverage Status](https://coveralls.io/repos/Stinger-Soft/PlatformBundle/badge.svg?branch=master)](https://coveralls.io/r/Stinger-Soft/PlatformBundle?branch=master)
 Basic bundle for all Stinger-Soft symfony based projects, bundling all kinds of platform functionality
