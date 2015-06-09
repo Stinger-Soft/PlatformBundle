@@ -5,6 +5,8 @@
  * Date: 09.06.2015
  * Time: 23:29
  */
+namespace StingerSoft\PlatformBundle\Tests;
+
 use StingerSoft\PlatformBundle\DependencyInjection\StingerSoftPlatformExtension;
 use StingerSoft\PlatformBundle\StingerSoftPlatformBundle;
 use Symfony\Component\DependencyInjection\Compiler\ResolveDefinitionTemplatesPass;
