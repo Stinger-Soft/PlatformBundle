@@ -76,7 +76,6 @@ class TablePrefixServiceTest extends TestCase{
 		$this->prefixService = $this->createContainer()->get(TablePrefixService::SERVICE_ID);
 	}
 	
-	
 	public function testService(){
 		$this->assertInstanceOf('StingerSoft\PlatformBundle\Service\Doctrine\TablePrefixService', $this->prefixService);
 	}
@@ -85,8 +84,6 @@ class TablePrefixServiceTest extends TestCase{
 		$this->assertArraySubset(array('loadClassMetadata'), $this->prefixService->getSubscribedEvents());
 	}
 	
-	
-
 	public function testSingleInheritanceWithoutRoot(){
 		$cm = $this->mockEventArgs();
 		$cm->method('isInheritanceTypeSingleTable')->will($this->returnValue(true));
