@@ -43,13 +43,13 @@ class TablePrefixService implements EventSubscriber {
 		}
 		
 		$prefix = $classMetadata->namespace;
-		preg_match('/([^\\\\]+)Bundle/i', $classMetadata->namespace, $prefix);
 		if(!preg_match('/([^\\\\]+)Bundle/i', $classMetadata->namespace, $prefix)){
 			return;
 		}
-		if(count($prefix)!=2){
-			return;
-		}
+		//Can this happen??
+// 		if(count($prefix)!=2){
+// 			return;
+// 		}
 		$prefix = strtolower($prefix[1]).'_';
 		
 		$classMetadata->setPrimaryTable ( array (

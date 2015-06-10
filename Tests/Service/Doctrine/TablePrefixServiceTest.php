@@ -26,7 +26,20 @@ class TablePrefixServiceTest extends TestCase{
 							'name' => 'user_group',
 							'prefixed' => false,
 					)
-			) 
+			),
+			'roles' => array(
+					'type' => ClassMetadataInfo::MANY_TO_MANY,
+					'joinTable' => array(
+							'name' => 'user_roles',
+							'prefixed' => true,
+					)
+			),
+			'addresses' => array(
+					'type' => ClassMetadataInfo::MANY_TO_MANY,
+					'joinTable' => array(
+							'name' => 'user_addresses',
+					)
+			)
 	);
 	
 	public static $assocMappingAfter =  array(
@@ -34,6 +47,20 @@ class TablePrefixServiceTest extends TestCase{
 					'type' => ClassMetadataInfo::MANY_TO_MANY,
 					'joinTable' => array(
 							'name' => 'platform_user_group',
+							'prefixed' => true,
+					)
+			),
+			'roles' => array(
+					'type' => ClassMetadataInfo::MANY_TO_MANY,
+					'joinTable' => array(
+							'name' => 'user_roles',
+							'prefixed' => true,
+					)
+			),
+			'addresses' => array(
+					'type' => ClassMetadataInfo::MANY_TO_MANY,
+					'joinTable' => array(
+							'name' => 'platform_user_addresses',
 							'prefixed' => true,
 					)
 			)
