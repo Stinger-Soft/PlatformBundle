@@ -12,6 +12,7 @@ namespace StingerSoft\PlatformBundle\Service\Doctrine;
 
 use Doctrine\ORM\Event\LoadClassMetadataEventArgs;
 use Doctrine\Common\EventSubscriber;
+use Doctrine\ORM\Mapping\ClassMetadataInfo;
 
 /**
  * 
@@ -21,13 +22,13 @@ use Doctrine\Common\EventSubscriber;
  *
  */
 class TablePrefixService implements EventSubscriber {
-	public function __construct() {
-	}
+
 	public function getSubscribedEvents() {
 		return array (
 				'loadClassMetadata' 
 		);
 	}
+	
 	public function loadClassMetadata(LoadClassMetadataEventArgs $args) {
 		$classMetadata = $args->getClassMetadata ();
 		
@@ -51,7 +52,7 @@ class TablePrefixService implements EventSubscriber {
 		) );
 		
 		foreach ( $classMetadata->getAssociationMappings () as $fieldName => $mapping ) {
-			if ($mapping ['type'] == \Doctrine\ORM\Mapping\ClassMetadataInfo::MANY_TO_MANY && isset ( $classMetadata->associationMappings [$fieldName] ['joinTable'] ['name'] )) {
+			if ($mapping ['type'] == ClassMetadataInfo::MANY_TO_MANY && isset ( $classMetadata->associationMappings [$fieldName] ['joinTable'] ['name'] )) {
 				if(isset ( $classMetadata->associationMappings [$fieldName] ['joinTable'] ['prefixed'] ) && $classMetadata->associationMappings [$fieldName] ['joinTable'] ['prefixed']){
 					continue;
 				}
