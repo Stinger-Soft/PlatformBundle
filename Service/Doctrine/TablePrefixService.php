@@ -22,6 +22,8 @@ use Doctrine\ORM\Mapping\ClassMetadataInfo;
  *
  */
 class TablePrefixService implements EventSubscriber {
+	
+	const SERVICE_ID = 'stinger_soft_platform.doctrine.table_prefix';
 
 	public function getSubscribedEvents() {
 		return array (
@@ -29,11 +31,14 @@ class TablePrefixService implements EventSubscriber {
 		);
 	}
 	
+	/**
+	 * @param LoadClassMetadataEventArgs $args
+	 */
 	public function loadClassMetadata(LoadClassMetadataEventArgs $args) {
 		$classMetadata = $args->getClassMetadata ();
 		
 		// Do not re-apply the prefix in an inheritance hierarchy.
-		if ($classMetadata->isInheritanceTypeSingleTable () && ! $classMetadata->isRootEntity ()) {
+		if ($classMetadata->isInheritanceTypeSingleTable() && !$classMetadata->isRootEntity()) {
 			return;
 		}
 		
@@ -53,7 +58,7 @@ class TablePrefixService implements EventSubscriber {
 		
 		foreach ( $classMetadata->getAssociationMappings () as $fieldName => $mapping ) {
 			if ($mapping ['type'] == ClassMetadataInfo::MANY_TO_MANY && isset ( $classMetadata->associationMappings [$fieldName] ['joinTable'] ['name'] )) {
-				if(isset ( $classMetadata->associationMappings [$fieldName] ['joinTable'] ['prefixed'] ) && $classMetadata->associationMappings [$fieldName] ['joinTable'] ['prefixed']){
+				if(isset ($classMetadata->associationMappings[$fieldName]['joinTable']['prefixed']) && $classMetadata->associationMappings [$fieldName] ['joinTable'] ['prefixed']){
 					continue;
 				}
 				
