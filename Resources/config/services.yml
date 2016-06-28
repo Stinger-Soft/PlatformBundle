@@ -1,8 +1,8 @@
 parameters:
-  stinger_soft_platform.doctrine.table_prefix.class: StingerSoft\PlatformBundle\Service\Doctrine\TablePrefixService
+  stinger_soft_platform.doctrine.table_prefix.class: 'StingerSoft\PlatformBundle\Service\Doctrine\TablePrefixService'
 
 services:
   stinger_soft_platform.doctrine.table_prefix:
-    class: %stinger_soft_platform.doctrine.table_prefix.class%
+    class: '%stinger_soft_platform.doctrine.table_prefix.class%'
     tags:
-      - { name: doctrine.event_subscriber }
+      - { name: 'doctrine.event_subscriber' }

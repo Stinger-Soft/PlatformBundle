@@ -1,11 +1,14 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: kodde
- * Date: 09.06.2015
- * Time: 23:58
- */
 
+/*
+ * This file is part of the Stinger Soft Platform package.
+ *
+ * (c) Oliver Kotte <oliver.kotte@stinger-soft.net>
+ * (c) Florian Meyer <florian.meyer@stinger-soft.net>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 namespace StingerSoft\PlatformBundle\Entity;
 
 use FOS\UserBundle\Model\User as BaseUser;
@@ -40,6 +43,7 @@ class User extends BaseUser implements Identifiable {
 	protected $surname;
 
 	/**
+	 *
 	 * @return string
 	 */
 	public function getFirstname() {
@@ -47,17 +51,19 @@ class User extends BaseUser implements Identifiable {
 	}
 
 	/**
-	 * @param string $firstname
+	 *
+	 * @param string $firstname        	
 	 *
 	 * @return $this
 	 */
 	public function setFirstname($firstname) {
 		$this->firstname = $firstname;
-
+		
 		return $this;
 	}
 
 	/**
+	 *
 	 * @return string
 	 */
 	public function getSurname() {
@@ -65,13 +71,14 @@ class User extends BaseUser implements Identifiable {
 	}
 
 	/**
-	 * @param string $surname
+	 *
+	 * @param string $surname        	
 	 *
 	 * @return $this
 	 */
 	public function setSurname($surname) {
 		$this->surname = $surname;
-
+		
 		return $this;
 	}
 
@@ -96,6 +103,7 @@ class User extends BaseUser implements Identifiable {
 	}
 
 	/**
+	 *
 	 * @return string "Surname, Firstname"|"Surname"
 	 */
 	public function getReversedRealName() {
@@ -107,6 +115,7 @@ class User extends BaseUser implements Identifiable {
 	}
 
 	/**
+	 *
 	 * @return string "Firstname Surname"|"Username"
 	 */
 	public function __toString() {
