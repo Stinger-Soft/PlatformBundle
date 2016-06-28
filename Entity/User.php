@@ -12,6 +12,7 @@
 namespace StingerSoft\PlatformBundle\Entity;
 
 use FOS\UserBundle\Model\User as BaseUser;
+use StingerSoft\PlatformBundle\Model\Identifiable;
 
 /**
  *

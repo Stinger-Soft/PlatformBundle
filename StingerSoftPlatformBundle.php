@@ -15,7 +15,7 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 class StingerSoftPlatformBundle extends Bundle {
 
-	public static function getRequiredBundle($env) {
+	public static function getRequiredBundles($env) {
 		$bundles = [];
 		$bundles['FrameworkBundle'] = '\Symfony\Bundle\FrameworkBundle\FrameworkBundle';
 		$bundles['SecurityBundle'] = '\Symfony\Bundle\SecurityBundle\SecurityBundle';
@@ -24,6 +24,7 @@ class StingerSoftPlatformBundle extends Bundle {
 		$bundles['SwiftmailerBundle'] = '\Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle';
 		$bundles['DoctrineBundle'] = '\Doctrine\Bundle\DoctrineBundle\DoctrineBundle';
 		$bundles['SensioFrameworkExtraBundle'] = '\Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle';
+		$bundles['DoctrineBehaviorsBundle'] = '\Knp\DoctrineBehaviors\Bundle\DoctrineBehaviorsBundle';
 		
 		if(in_array($env, [
 			'dev',

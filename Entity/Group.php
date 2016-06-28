@@ -13,6 +13,7 @@ namespace StingerSoft\PlatformBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use FOS\UserBundle\Model\Group as BaseGroup;
+use StingerSoft\PlatformBundle\Model\Identifiable;
 
 /**
  *
