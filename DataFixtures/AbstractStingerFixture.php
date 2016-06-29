@@ -18,7 +18,7 @@ use Symfony\Component\DependencyInjection\ContainerAwareTrait;
 use Psr\Log\LoggerInterface;
 use Psr\Log\NullLogger;
 
-abstract class AbstractStingerFixture extends AbstractFixture implements DependentFixtureInterface {
+abstract class AbstractStingerFixture extends AbstractFixture  {
 	
 	use ContainerAwareTrait;
 
@@ -37,20 +37,20 @@ abstract class AbstractStingerFixture extends AbstractFixture implements Depende
 	public final function load(ObjectManager $manager) {
 		$this->manager = $manager;
 		if(!$this->skipMe()) {
-			$this->info("Starting import of fixtures ...");
+			$this->getLogger()->info("Starting import of fixtures ...");
 			$this->reportMemoryUsage();
-// 			$startTime = microtime(true);
+			// $startTime = microtime(true);
 			$this->import();
-// 			$endTime = microtime(true);
-// 			$this->info("Finished importing fixtures in " . $this->formatTime($startTime, $endTime));
+			// $endTime = microtime(true);
+			// $this->info("Finished importing fixtures in " . $this->formatTime($startTime, $endTime));
 			$this->reportMemoryUsage();
 		} else {
-			$this->info('Skipping import of fixtures !');
+			$this->getLogger()->info('Skipping import of fixtures !');
 		}
 	}
 
 	protected final function reportMemoryUsage() {
-		$this->info("Currently using %s of RAM", $this->getMemoryUsage());
+		//$this->getLogger()->info("Currently using %s of RAM", $this->getMemoryUsage());
 	}
 
 	/**
@@ -66,7 +66,6 @@ abstract class AbstractStingerFixture extends AbstractFixture implements Depende
 	protected function skipMe() {
 		return false;
 	}
-	
 
 	/**
 	 *
@@ -81,8 +80,4 @@ abstract class AbstractStingerFixture extends AbstractFixture implements Depende
 		return $this->logger;
 	}
 
-	/**
-	 */
-	protected function getDependencies() {
-	}
 }

@@ -23,6 +23,7 @@ class StingerSoftPlatformBundle extends Bundle {
 		$bundles['MonologBundle'] = '\Symfony\Bundle\MonologBundle\MonologBundle';
 		$bundles['SwiftmailerBundle'] = '\Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle';
 		$bundles['DoctrineBundle'] = '\Doctrine\Bundle\DoctrineBundle\DoctrineBundle';
+		$bundles['DoctrineFixturesBundle'] = '\Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle';
 		$bundles['SensioFrameworkExtraBundle'] = '\Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle';
 		$bundles['DoctrineBehaviorsBundle'] = '\Knp\DoctrineBehaviors\Bundle\DoctrineBehaviorsBundle';
 		
