@@ -21,11 +21,16 @@ class StingerSoftPlatformBundle extends Bundle {
 		$bundles['SecurityBundle'] = '\Symfony\Bundle\SecurityBundle\SecurityBundle';
 		$bundles['TwigBundle'] = '\Symfony\Bundle\TwigBundle\TwigBundle';
 		$bundles['MonologBundle'] = '\Symfony\Bundle\MonologBundle\MonologBundle';
+		$bundles['AsseticBundle'] = '\Symfony\Bundle\AsseticBundle\AsseticBundle';
 		$bundles['SwiftmailerBundle'] = '\Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle';
 		$bundles['DoctrineBundle'] = '\Doctrine\Bundle\DoctrineBundle\DoctrineBundle';
 		$bundles['DoctrineFixturesBundle'] = '\Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle';
 		$bundles['SensioFrameworkExtraBundle'] = '\Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle';
 		$bundles['DoctrineBehaviorsBundle'] = '\Knp\DoctrineBehaviors\Bundle\DoctrineBehaviorsBundle';
+		$bundles['BmatznerFontAwesomeBundle'] = '\Bmatzner\FontAwesomeBundle\BmatznerFontAwesomeBundle';
+		$bundles['BmatznerJQueryBundle'] = 'Bmatzner\JQueryBundle\BmatznerJQueryBundle';
+		
+		$bundles['StingerSoftPlatformBundle'] = '\StingerSoft\PlatformBundle\StingerSoftPlatformBundle';
 		
 		if(in_array($env, [
 			'dev',

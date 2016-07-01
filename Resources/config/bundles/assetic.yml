@@ -1,0 +1,16 @@
+assetic:
+    debug:          '%kernel.debug%'
+    use_controller: '%kernel.debug%'
+    assets:
+        bootstrap_js:
+            inputs:
+                - '%kernel.root_dir%/../vendor/twbs/bootstrap-sass/assets/javascripts/bootstrap.min.js'
+        jquery_js:
+            inputs:
+                - '%kernel.root_dir%/../vendor/twbs/bootstrap-sass/assets/javascripts/bootstrap.min.js'
+    filters:
+        cssrewrite: ~
+        scssphp: 
+            import_paths: 
+              - '%kernel.root_dir%/../vendor/twbs/bootstrap-sass/assets/stylesheets/'
+            apply_to: '\.scss$'

@@ -6,3 +6,13 @@ services:
     class: '%stinger_soft_platform.doctrine.table_prefix.class%'
     tags:
       - { name: 'doctrine.event_subscriber' }
+
+  twig.extension.intl:
+    class: Twig_Extensions_Extension_Intl
+    tags:
+      - { name: twig.extension }
+
+  twig.extension.text:
+    class: Twig_Extensions_Extension_Text
+    tags:
+      - { name: twig.extension }
