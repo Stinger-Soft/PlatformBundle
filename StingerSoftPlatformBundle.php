@@ -28,7 +28,8 @@ class StingerSoftPlatformBundle extends Bundle {
 		$bundles['SensioFrameworkExtraBundle'] = '\Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle';
 		$bundles['DoctrineBehaviorsBundle'] = '\Knp\DoctrineBehaviors\Bundle\DoctrineBehaviorsBundle';
 		$bundles['BmatznerFontAwesomeBundle'] = '\Bmatzner\FontAwesomeBundle\BmatznerFontAwesomeBundle';
-		$bundles['BmatznerJQueryBundle'] = 'Bmatzner\JQueryBundle\BmatznerJQueryBundle';
+		$bundles['BmatznerJQueryBundle'] = '\Bmatzner\JQueryBundle\BmatznerJQueryBundle';
+		$bundles['KnpPaginatorBundle'] = '\Knp\Bundle\PaginatorBundle\KnpPaginatorBundle';
 		
 		$bundles['StingerSoftPlatformBundle'] = '\StingerSoft\PlatformBundle\StingerSoftPlatformBundle';
 		

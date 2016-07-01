@@ -2,11 +2,9 @@ assetic:
     debug:          '%kernel.debug%'
     use_controller: '%kernel.debug%'
     assets:
-        bootstrap_js:
+        header_js:
             inputs:
-                - '%kernel.root_dir%/../vendor/twbs/bootstrap-sass/assets/javascripts/bootstrap.min.js'
-        jquery_js:
-            inputs:
+                - '%kernel.root_dir%/../vendor/bmatzner/jquery-bundle/Bmatzner/JQueryBundle/Resources/public/js/jquery.min.js'
                 - '%kernel.root_dir%/../vendor/twbs/bootstrap-sass/assets/javascripts/bootstrap.min.js'
     filters:
         cssrewrite: ~

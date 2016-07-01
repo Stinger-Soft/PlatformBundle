@@ -1,5 +1,5 @@
 parameters:
-  stinger_soft_platform.doctrine.table_prefix.class: 'StingerSoft\PlatformBundle\Service\Doctrine\TablePrefixService'
+  stinger_soft_platform.doctrine.table_prefix.class: 'StingerSoft\DoctrineCommons\Services\TablePrefixService'
 
 services:
   stinger_soft_platform.doctrine.table_prefix:

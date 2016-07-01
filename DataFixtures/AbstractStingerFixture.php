@@ -12,13 +12,12 @@
 namespace StingerSoft\PlatformBundle\DataFixtures;
 
 use Doctrine\Common\DataFixtures\AbstractFixture;
-use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
-use Symfony\Component\DependencyInjection\ContainerAwareTrait;
 use Psr\Log\LoggerInterface;
 use Psr\Log\NullLogger;
+use Symfony\Component\DependencyInjection\ContainerAwareTrait;
 
-abstract class AbstractStingerFixture extends AbstractFixture  {
+abstract class AbstractStingerFixture extends AbstractFixture {
 	
 	use ContainerAwareTrait;
 
@@ -50,7 +49,7 @@ abstract class AbstractStingerFixture extends AbstractFixture  {
 	}
 
 	protected final function reportMemoryUsage() {
-		//$this->getLogger()->info("Currently using %s of RAM", $this->getMemoryUsage());
+		// $this->getLogger()->info("Currently using %s of RAM", $this->getMemoryUsage());
 	}
 
 	/**
@@ -79,5 +78,4 @@ abstract class AbstractStingerFixture extends AbstractFixture  {
 		}
 		return $this->logger;
 	}
-
 }
