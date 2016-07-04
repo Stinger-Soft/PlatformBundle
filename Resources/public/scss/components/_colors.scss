@@ -1,5 +1,5 @@
-@each $category, $color in $pec-colors {
-	@each $shadeName, $colors in $color {
+@each $category, $colors in $pec-colors {
+	@each $shadeName, $color in $colors {
 		$name: "#{$category}-#{$shadeName}";
 		@if $shadeName == "default" {
 			$name: $category;
