@@ -8,12 +8,9 @@
 @import "bootstrap/variables";
 @import "bootstrap/mixins";
 
-// Override bootstrap variables to match Metronic style
+// Override bootstrap variables to match StingerStyle
 @import "variables";
 @import "bootstrap/override";
-
-// Override bootstrap variable to match pec style
-@import "global/pec-override";
 
 // Reset and dependencies
 @import "bootstrap/normalize";
