@@ -14,30 +14,58 @@ namespace StingerSoft\PlatformBundle\Model;
 interface Trackable {
 
 	/**
-	 * @param mixed the user representation
+	 *
+	 * @param
+	 *        	mixed the user representation
 	 * @return $this
 	 */
 	public function setCreatedBy($user);
-	
+
 	/**
-	 * @param mixed the user representation
+	 *
+	 * @param
+	 *        	mixed the user representation
 	 * @return $this
 	 */
 	public function setUpdatedBy($user);
-	
+
 	/**
-	 * @param mixed the user representation
-	 * @return $this
-	 */
-	public function setDeletedBy($user);
-	
-	/**
+	 *
 	 * @return mixed the user who created entity
 	 */
 	public function getCreatedBy();
-	
+
 	/**
+	 *
 	 * @return mixed the user who last updated entity
 	 */
 	public function getUpdatedBy();
+
+	/**
+	 * Returns createdAt value.
+	 *
+	 * @return \DateTime
+	 */
+	public function getCreatedAt();
+
+	/**
+	 * Returns updatedAt value.
+	 *
+	 * @return \DateTime
+	 */
+	public function getUpdatedAt();
+
+	/**
+	 *
+	 * @param \DateTime $createdAt        	
+	 * @return $this
+	 */
+	public function setCreatedAt(\DateTime $createdAt);
+
+	/**
+	 *
+	 * @param \DateTime $updatedAt        	
+	 * @return $this
+	 */
+	public function setUpdatedAt(\DateTime $updatedAt);
 }
