@@ -90,7 +90,7 @@ class User extends BaseUser implements Identifiable {
 	 */
 	public function getRealName() {
 		if($this->firstname || $this->surname) {
-			return $this->getFirstname() . ' ' . $this->getSurname();
+			return trim($this->getFirstname() . ' ' . $this->getSurname());
 		}
 		return null;
 	}
