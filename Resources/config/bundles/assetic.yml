@@ -1,6 +1,6 @@
 assetic:
     debug:          '%kernel.debug%'
-    use_controller: '%kernel.debug%'
+    use_controller: false
     assets:
         header_js:
             inputs:
@@ -11,4 +11,5 @@ assetic:
         scssphp: 
             import_paths: 
               - '%kernel.root_dir%/../vendor/twbs/bootstrap-sass/assets/stylesheets/'
+              - '%kernel.root_dir%/../vendor/stinger-soft/platform-bundle/Resources/public/scss/'
             apply_to: '\.scss$'

@@ -1,0 +1,12 @@
+@each $category, $colors in $pec-colors {
+	@each $shadeName, $colors in $colors {
+		$name: "#{$category}-#{$shadeName}";
+		@if $shadeName == "default" {
+			$name: $category;
+		}
+		.btn.#{$name} {
+			background-color: map-get($colors, base);
+			color: map-get($colors, font);
+		}
+	}
+}
