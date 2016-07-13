@@ -30,6 +30,7 @@ class StingerSoftPlatformBundle extends Bundle {
 		$bundles['BmatznerFontAwesomeBundle'] = '\Bmatzner\FontAwesomeBundle\BmatznerFontAwesomeBundle';
 		$bundles['BmatznerJQueryBundle'] = '\Bmatzner\JQueryBundle\BmatznerJQueryBundle';
 		$bundles['KnpPaginatorBundle'] = '\Knp\Bundle\PaginatorBundle\KnpPaginatorBundle';
+		$bundles['FOSJsRoutingBundle'] = '\FOS\JsRoutingBundle\FOSJsRoutingBundle';
 		
 		$bundles['StingerSoftPlatformBundle'] = '\StingerSoft\PlatformBundle\StingerSoftPlatformBundle';
 		
